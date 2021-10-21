@@ -1,0 +1,12 @@
+.footer{
+    background-color: #000000;
+}
+
+.footer p{
+    color: #fff;
+}
+
+.footer p span{
+    font-weight: bold;
+    font-style: italic;
+}
