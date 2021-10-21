@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/PSPshortlisting/static/css/main.fbdb984a.chunk.css",
+    "main.js": "/PSPshortlisting/static/js/main.3f09f99d.chunk.js",
+    "main.js.map": "/PSPshortlisting/static/js/main.3f09f99d.chunk.js.map",
+    "runtime-main.js": "/PSPshortlisting/static/js/runtime-main.e1fb0c55.js",
+    "runtime-main.js.map": "/PSPshortlisting/static/js/runtime-main.e1fb0c55.js.map",
+    "static/css/2.fe708519.chunk.css": "/PSPshortlisting/static/css/2.fe708519.chunk.css",
+    "static/js/2.225473dc.chunk.js": "/PSPshortlisting/static/js/2.225473dc.chunk.js",
+    "static/js/2.225473dc.chunk.js.map": "/PSPshortlisting/static/js/2.225473dc.chunk.js.map",
+    "index.html": "/PSPshortlisting/index.html",
+    "static/css/2.fe708519.chunk.css.map": "/PSPshortlisting/static/css/2.fe708519.chunk.css.map",
+    "static/css/main.fbdb984a.chunk.css.map": "/PSPshortlisting/static/css/main.fbdb984a.chunk.css.map",
+    "static/js/2.225473dc.chunk.js.LICENSE.txt": "/PSPshortlisting/static/js/2.225473dc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e1fb0c55.js",
+    "static/css/2.fe708519.chunk.css",
+    "static/js/2.225473dc.chunk.js",
+    "static/css/main.fbdb984a.chunk.css",
+    "static/js/main.3f09f99d.chunk.js"
+  ]
+}
