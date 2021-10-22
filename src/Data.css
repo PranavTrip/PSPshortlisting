@@ -55,3 +55,12 @@ p {
  
   margin: 1rem auto 0rem auto;
 }
+@media (max-width: 550px){
+  .game-board {
+    display: grid;
+    grid-template-rows: 7rem 7rem 7rem;
+    grid-template-columns: 7rem 7rem 7rem;
+    align-content: center;
+    justify-content: center;
+  }
+}

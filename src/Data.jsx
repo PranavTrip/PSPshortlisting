@@ -208,7 +208,7 @@ const Data = () => {
             return (
               <>
                 <p className="text-center">
-                  You have earned{" "}
+                  You have earned
                   <span className="fw-bolder">{numberOfCertifications}</span>{" "}
                   certificate(s) from freeCodeCamp in{" "}
                   <span className="fw-bolder">{time}</span> months.
