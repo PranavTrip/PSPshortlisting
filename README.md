@@ -21,11 +21,13 @@ This React App is live on : https://pranavtrip.github.io/PSPshortlisting/
 ## Criteria we follow to evaluate the user
 
 1. PSP Performance
+
 👉 If the user maintaines ReadME of his/her GitHub repositories and he/she uses Git commands to commit the source code the PSP Performance is marked as "High".
 👉 But if the user doesn't use Git commands to commit or the user doesn't maintain ReadME his PSP Performance is "Mid".
 👉 If the user doesn't use Git commands to commit nor he maintains ReadME his PSP Performance is "Low".
 
 2. PSP Potential
+
 👉 If the user has completed 3 or more than 3 freeCodeCamp Certifications his/her potential is "High".
 👉 If the user has completed 2 freeCodeCamp Certifications then his/her potential is "Mid".
 👉 If the user has completed 1 or less than 1 freeCodeCamp Certifications, PSP Potential is "Low".
