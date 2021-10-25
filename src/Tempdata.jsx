@@ -57,10 +57,7 @@ const Tempdata = () => {
         </h5>
         <div className="row">
           <div className="col-12 col-lg-6">
-            <form
-              className="form-control mx-auto bg-dark"
-              onSubmit={submitForm}
-            >
+            <form className="form-control mx-auto bg-dark">
               <p className="text-center w-100 text-white">
                 Enter the number of freeCodecamp certifications completed
               </p>
@@ -157,7 +154,10 @@ const Tempdata = () => {
               <div className="row">
                 <div className="col-sm-12 col-lg-6 mx-auto secondary-div">
                   <div className="container my-5 text-center">
-                    <button className="btn btn-success text-center ">
+                    <button
+                      className="btn btn-success text-center"
+                      onClick={submitForm}
+                    >
                       SUBMIT
                     </button>
                   </div>
@@ -177,6 +177,7 @@ const Tempdata = () => {
           </div>
           <div className="col-12 col-lg-6 mx-auto">
             <div className="game-board my-5">
+            {/* High Potential, High Performance */}
               <div
                 className="box b-1 text-center"
                 style={
@@ -194,6 +195,7 @@ const Tempdata = () => {
               >
                 High Potential, High Performance
               </div>
+              {/* Mid Potential, High Performance */}
               <div
                 className="box b-2 text-center"
                 style={
@@ -253,7 +255,7 @@ const Tempdata = () => {
                     readme == "Yes" &&
                     commit == "No") ||
                   (numberOfCertifications == 2 &&
-                    time >= 6 &&
+                    
                     time > 0 &&
                     readme == "No" &&
                     commit == "Yes")
@@ -279,7 +281,7 @@ const Tempdata = () => {
                 Low Potential, Mid Performance
               </div>
               <div
-                className="box b-7 text-center"
+                className="box b-7 text-center "
                 style={
                   (numberOfCertifications == 3 &&
                     time > 0 &&
@@ -295,8 +297,9 @@ const Tempdata = () => {
               >
                 High Potential, Low Performance
               </div>
+              {/* Mid, Low */}
               <div
-                className="box b-8 text-center"
+                className="box b-8 text-center "
                 style={
                   (numberOfCertifications == 2 &&
                     time > 0 &&
@@ -313,8 +316,9 @@ const Tempdata = () => {
               >
                 Mid Potential, Low Performance
               </div>
+              {/* low, Low */}
               <div
-                className="box b-9 text-center"
+                className="box b-9 text-center "
                 style={
                   numberOfCertifications == 1 &&
                   readme == "No" &&
@@ -343,11 +347,23 @@ const Tempdata = () => {
                     </p>
                     <p className="text-center text-wrap">
                       <span className="fw-bolder">freeCodeCamp Link :</span>{" "}
-                      {fccLink}
+                      <a
+                        href={fccLink}
+                        className="text-dark text-decoration-none"
+                        target="_blank"
+                      >
+                        {fccLink}
+                      </a>
                     </p>
                     <p className="text-center text-wrap">
                       <span className="fw-bolder text-wrap">GitHub Link :</span>{" "}
-                      {githubLLink}
+                      <a
+                        href={githubLLink}
+                        className="text-dark text-decoration-none"
+                        target="_blank"
+                      >
+                        {githubLLink}
+                      </a>
                     </p>
                   </>
                 );
