@@ -21,6 +21,11 @@ const Tempdata = () => {
   const [commit, setCommit] = useState();
   const [fccLink, setFCCLink] = useState();
   const [githubLLink, setGithubLink] = useState();
+  const [errors, setErrors] = useState();
+  const [minutes, setMinutes] = useState();
+  const [test, setTest] = useState();
+  const [logTime, setLogTime] = useState();
+  const [design, setDesign] = useState();
 
   const [allEntry, setAllEntry] = useState([]);
 
@@ -33,6 +38,12 @@ const Tempdata = () => {
       commit: commit,
       fccLink: fccLink,
       githubLLink: githubLLink,
+      errors: errors,
+      minutes: minutes,
+      test: test,
+      logTime,
+      logTime,
+      design: design,
     };
 
     setAllEntry([newEntry]);
@@ -45,6 +56,11 @@ const Tempdata = () => {
     setGithubLink("");
     setReadme("");
     setCommit("");
+    setErrors("");
+    setMinutes("");
+    setTest("");
+    setLogTime("");
+    setDesign("");
     setAllEntry([]);
   };
 
@@ -57,7 +73,10 @@ const Tempdata = () => {
         </h5>
         <div className="row">
           <div className="col-12 col-lg-6">
-            <form className="form-control mx-auto bg-dark">
+            <form
+              className="form-control mx-auto bg-dark"
+              onSubmit={submitForm}
+            >
               <p className="text-center w-100 text-white">
                 Enter the number of freeCodecamp certifications completed
               </p>
@@ -151,13 +170,89 @@ const Tempdata = () => {
                   setGithubLink(e.target.value);
                 }}
               />
+              <p className="text-center w-100 text-white">
+                How many compile time errors did you encounter while coding or
+                testing your project ?
+              </p>
+              <input
+                required
+                type="number"
+                placeholder="Number of errors while coding or testing"
+                className="form-control text-center"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                name="errors"
+                value={errors}
+                onChange={(e) => {
+                  setErrors(e.target.value);
+                }}
+              />
+              <p className="text-center w-100 text-white">
+                Approximate time taken to fix these errors (in minutes) ?
+              </p>
+              <input
+                required
+                type="number"
+                placeholder="Approximate time taken to fix these errors (in minutes) ?"
+                className="form-control text-center"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                name="minutes"
+                value={minutes}
+                onChange={(e) => {
+                  setMinutes(e.target.value);
+                }}
+              />
+              <p className="text-center w-100 text-white">
+                Do you test your project manually before deployment or before
+                passing the project to a tester ?
+              </p>
+              <Dropdown
+                required
+                name="test"
+                options={data}
+                value={test}
+                onChange={(e) => {
+                  setTest(e.value);
+                }}
+                placeholder="Do you test your project manually before deployment or before passing the project to a tester ?"
+                className="drop-down mx-auto"
+              />
+              <p className="text-center w-100 text-white">
+                Do you log time while doing any particular task or do you log
+                your time while developing a software ?
+              </p>
+              <Dropdown
+                required
+                name="logTime"
+                options={data}
+                value={logTime}
+                onChange={(e) => {
+                  setLogTime(e.value);
+                }}
+                placeholder="Do you log time while doing any particular task or do you log your time while developing a software ?"
+                className="drop-down mx-auto"
+              />
+              <p className="text-center w-100 text-white">
+                Do you plan or design before coding a project ? or Do you
+                wireframe your project before coding it ?
+              </p>
+              <Dropdown
+                required
+                name="design"
+                options={data}
+                value={design}
+                onChange={(e) => {
+                  setDesign(e.value);
+                }}
+                placeholder="Do you plan or design before coding a project ? or Do you wireframe your project before coding it ?"
+                className="drop-down mx-auto"
+              />
+
               <div className="row">
                 <div className="col-sm-12 col-lg-6 mx-auto secondary-div">
                   <div className="container my-5 text-center">
-                    <button
-                      className="btn btn-success text-center"
-                      onClick={submitForm}
-                    >
+                    <button className="btn btn-success text-center">
                       SUBMIT
                     </button>
                   </div>
@@ -177,7 +272,7 @@ const Tempdata = () => {
           </div>
           <div className="col-12 col-lg-6 mx-auto">
             <div className="game-board my-5">
-            {/* High Potential, High Performance */}
+              {/* High Potential, High Performance */}
               <div
                 className="box b-1 text-center"
                 style={
@@ -255,7 +350,6 @@ const Tempdata = () => {
                     readme == "Yes" &&
                     commit == "No") ||
                   (numberOfCertifications == 2 &&
-                    
                     time > 0 &&
                     readme == "No" &&
                     commit == "Yes")
@@ -364,6 +458,18 @@ const Tempdata = () => {
                       >
                         {githubLLink}
                       </a>
+                    </p>
+                    <p className="text-center text-wrap">
+                      <span className="fw-bolder text-wrap">
+                        Number of Errors :
+                      </span>{" "}
+                      {errors}
+                    </p>
+                    <p className="text-center text-wrap">
+                      <span className="fw-bolder text-wrap">
+                        Time taken to solve these Errors :
+                      </span>{" "}
+                      {minutes}
                     </p>
                   </>
                 );
